@@ -44,7 +44,7 @@ describe("simpleView", () => {
         fileContents = fileContents ? fileContents : comparableText;
 
         const apply = await import("./simpleView");
-        const result = apply.applyInspectorViewHandleActionPatch(fileContents);
+        const result = apply.applyHandleActionPatch(fileContents);
         expect(result).not.toEqual(null);
         expect(result).toEqual(
             expect.stringContaining("handleAction(context, actionId) { return false;"));

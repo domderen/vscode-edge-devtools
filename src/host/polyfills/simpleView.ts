@@ -36,7 +36,7 @@ export function applyCommonRevealerPatch(content: string) {
     }
 }
 
-export function applyInspectorViewHandleActionPatch(content: string) {
+export function applyHandleActionPatch(content: string) {
     const pattern = /handleAction\(context,\s*actionId\)\s*{/g;
 
     if (content.match(pattern)) {
