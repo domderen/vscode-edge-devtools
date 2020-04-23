@@ -8,10 +8,10 @@ import { applyCreateElementPatch, applyUIUtilsPatch } from "./src/host/polyfills
 import { applyContentSecurityPolicyPatch } from "./src/host/polyfills/inspectorContentPolicy";
 import {
     applyCommonRevealerPatch,
+    applyHandleActionPatch,
     applyInspectorCommonCssHeaderContentsPatch,
     applyInspectorCommonCssRightToolbarPatch,
     applyInspectorCommonCssTabSliderPatch,
-    applyHandleActionPatch,
     applyInspectorViewShowDrawerPatch,
     applyMainViewPatch,
     applySelectTabPatch,
