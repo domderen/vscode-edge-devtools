@@ -103,6 +103,7 @@ async function patchFilesForWebView(toolsOutDir: string, debugMode: boolean) {
             applyInspectorViewShowDrawerPatch]);
         await patchFileForWebView("ui/TabbedPane.js", toolsOutDir, true, [applySelectTabPatch]);
         await patchFileForWebView("quick_open/QuickOpen.js", toolsOutDir, true, [applyHandleActionPatch]);
+        await patchFileForWebView("quick_open/CommandMenu.js", toolsOutDir, true, [applyHandleActionPatch]);
     } else {
         // tslint:disable-next-line:no-console
         console.log("Patching files for debug version");
@@ -118,6 +119,7 @@ async function patchFilesForWebView(toolsOutDir: string, debugMode: boolean) {
             applyInspectorViewShowDrawerPatch]);
         await patchFileForWebView("ui/TabbedPane.js", toolsOutDir, false, [applySelectTabPatch]);
         await patchFileForWebView("quick_open/QuickOpen.js", toolsOutDir, true, [applyHandleActionPatch]);
+        await patchFileForWebView("quick_open/CommandMenu.js", toolsOutDir, true, [applyHandleActionPatch]);
         // Debug file versions
         await patchFileForWebView("ui/UIUtils.js", toolsOutDir, false, [applyUIUtilsPatch]);
         await patchFileForWebView("dom_extension/DOMExtension.js", toolsOutDir, false, [applyCreateElementPatch]);
